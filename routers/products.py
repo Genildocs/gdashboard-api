@@ -19,5 +19,5 @@ class Products(BaseModel):
 
 @router.get("/products")
 async def get_all_products(products: Products):
+            pass
 
-    return products
