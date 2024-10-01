@@ -2,6 +2,8 @@ from typing import Optional
 
 from fastapi import APIRouter
 from pydantic import BaseModel
+from firebase_db import db
+
 
 
 router = APIRouter(prefix="/api" , tags=['Products'])
@@ -17,4 +19,5 @@ class Products(BaseModel):
 
 @router.get("/products")
 async def get_all_products(products: Products):
+
     return products
